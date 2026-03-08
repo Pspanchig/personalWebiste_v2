@@ -27,10 +27,12 @@ export class InstitucionInfo {
   currentClassPage = signal(0);
   mapUrl = signal<SafeResourceUrl | null>(null);
   loadingSchool = signal(true);
+
   visibleClasses = computed(() => {
     const start = this.currentClassPage() * this.classesPerPage;
     return this.schoolClasses().slice(start, start + this.classesPerPage);
   });
+  
   totalClassPages = computed(() => Math.max(1, Math.ceil(this.schoolClasses().length / this.classesPerPage)));
   hasPreviousClassPage = computed(() => this.currentClassPage() > 0);
   hasNextClassPage = computed(() => this.currentClassPage() < this.totalClassPages() - 1);

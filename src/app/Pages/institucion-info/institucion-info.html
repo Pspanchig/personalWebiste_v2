@@ -1,256 +1,238 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon-DxIj0shP.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Pablo Santiago Panchig</title>
-    <meta
-      name="description"
-      content="Official site of Pablo Santiago Panchig. Explore my portfolio, software engineering projects, and tech blog."
-    />
-    <meta name="author" content="Pablo Santiago Panchig" />
-
-    <script type="module" crossorigin src="/assets/index-kegae4V1.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BEwU1T-p.css" />
-  </head>
-
-  <body class="bg-[#0f0f11] text-white antialiased">
-    <div id="root">
-      <main class="min-h-screen">
-        <section id="home" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="pt-8 bg-[#0f0f11]">
-            <app-navbar></app-navbar>
-          </div>
-          <div class="grid gap-8 lg:grid-cols-[380px_minmax(0,1fr)] pb-10">
-            <aside class="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
-              <div class="border-b border-white/10 p-6">
-                <div class="mb-4 flex items-center gap-4">
-                  @if (school() || schoolInfo()) {
-                    <img
-                      [src]="school()?.image ?? ''"
-                      [alt]="(schoolInfo()?.institucion ?? school()?.name ?? 'School') + ' logo'"
-                      class="h-16 w-16 rounded-2xl object-contain bg-white p-2"
-                    />
-                    <div>
-                      <p class="text-sm uppercase tracking-[0.2em] text-cyan-400">Education</p>
-                      <h1 class="text-2xl font-bold text-white">
-                        {{ schoolInfo()?.institucion ?? school()?.name ?? 'School not found' }}
-                      </h1>
-                    </div>
-                  } @else {
-                    <div>
-                      <p class="text-sm uppercase tracking-[0.2em] text-cyan-400">Education</p>
-                      <h1 class="text-2xl font-bold text-white">School not found</h1>
-                    </div>
-                  }
-                </div>
-                <div class="border-b border-t mt-10 border-white/10 p-6">
-                  <dl class="flex flex-col space-y-4 text-sm text-slate-300">
-                    <div>
-                      <dt class="font-semibold text-white">Attendance time</dt>
-                      <dd>{{ schoolInfo()?.attendance_time?.texto ?? school()?.enrolled ?? 'Not available' }}</dd>
-                    </div>
-
-                    <div>
-                      <dt class="font-semibold text-white">Degree earned</dt>
-                      <dd>{{ schoolInfo()?.degree_earned ?? school()?.degree ?? 'Not available' }}</dd>
-                    </div>
-
-                    <div>
-                      <dt class="font-semibold text-white">Location</dt>
-                      <dd>{{ schoolInfo()?.location ?? school()?.location ?? 'Not available' }}</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-
-              <div class="mt-auto p-6">
-                <div class="mb-4">
-                  <p class="text-xs font-medium uppercase tracking-[0.2em] text-cyan-400">Campus Location</p>
-                  <h3 class="mt-2 text-lg font-semibold text-white">This is where I studied</h3>
-                  <p class="mt-1 text-sm text-slate-300">
-                    {{ schoolInfo()?.location ?? school()?.location ?? 'Location not available' }}
-                  </p>
-                </div>
-                <div class="overflow-hidden rounded-2xl border border-cyan-400/20 bg-white/5 shadow-lg shadow-cyan-500/10">
-                  @if (mapUrl()) {
-                    <iframe
-                      [src]="mapUrl()"
-                      class="h-64 w-full"
-                      style="border: 0"
-                      allowfullscreen=""
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                      [title]="(schoolInfo()?.institucion ?? school()?.name ?? 'School') + ' map'"
-                    ></iframe>
-                  }
-                </div>
-              </div>
-            </aside>
-
-            <div class="space-y-8">
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                <div class="mb-4 flex items-center justify-between gap-4">
-                  <h2 class="text-2xl font-bold tracking-tight text-white">
-                    {{ schoolInfo()?.about?.titulo ?? 'Why this institution?' }}
-                  </h2>
-                  <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-300">
-                    {{ schoolInfo()?.programa ?? 'College Experience' }}
-                  </span>
-                </div>
-
-                <div class="prose prose-invert max-w-none prose-p:text-slate-300">
-                  <p>{{ schoolInfo()?.about?.descripcion ?? 'Information not available.' }}</p>
-                </div>
-              </article>
-
-              <div class="grid gap-6 md:grid-cols-2">
-                <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                  <h3 class="mb-4 text-xl font-semibold text-white">Rankings</h3>
-
-                  <ul class="space-y-3 text-slate-300">
-                    @for (ranking of schoolInfo()?.rankings ?? []; track $index) {
-                      <li class="rounded-2xl bg-white/5 px-4 py-3">{{ ranking }}</li>
-                    }
-                    @if (schoolInfo()?.abet_image) {
-                      <li class="rounded-2xl bg-white/5 px-4 py-3">
-                        <img
-                          [src]="schoolInfo()!.abet_image"
-                          alt="Accreditation image"
-                          class="h-10 w-auto rounded bg-white p-1"
-                        />
-                      </li>
-                    }
-                  </ul>
-                </article>
-
-                <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur min-h-105 max-h-100">
-                  <h3 class="mb-4 text-xl font-semibold text-white">
-                    {{ schoolInfo()?.highlight?.titulo ?? 'Highlight' }}
-                  </h3>
-
-                  <div class="overflow-hidden rounded-2xl bg-white/5">
-                    @if (schoolInfo()?.highlight?.imagen) {
-                      <img
-                        [src]="schoolInfo()!.highlight.imagen"
-                        [alt]="schoolInfo()!.highlight.nombre"
-                        class="h-64 w-full object-cover"
-                      />
-                    }
-                    <div class="p-1">
-                      <h4 class="text-lg font-semibold text-white">
-                        {{ schoolInfo()?.highlight?.nombre ?? 'School highlight' }}
-                      </h4>
-                      <p class="mt-2 text-sm text-slate-300">
-                        {{ schoolInfo()?.highlight?.descripcion ?? 'Information not available.' }}
-                      </p>
-                    </div>
+<body class="bg-[#0f0f11] text-white antialiased">
+  <div id="root">
+    <main class="min-h-screen">
+      <section id="home" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="pt-8 bg-[#0f0f11]">
+          <app-navbar></app-navbar>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-[380px_minmax(0,1fr)] pb-10">
+          <aside class="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
+            <div class="border-b border-white/10 p-6">
+              <div class="mb-4 flex items-center gap-4">
+                @if (school() || schoolInfo()) {
+                  <img
+                    [src]="school()?.image ?? ''"
+                    [alt]="(schoolInfo()?.institucion ?? school()?.name ?? 'School') + ' logo'"
+                    class="h-16 w-16 rounded-2xl object-contain bg-white p-2"
+                  />
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.2em] text-cyan-400">Education</p>
+                    <h1 class="text-2xl font-bold text-white">
+                      {{ schoolInfo()?.institucion ?? school()?.name ?? 'School not found' }}
+                    </h1>
                   </div>
-                </article>
+                } @else {
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.2em] text-cyan-400">Education</p>
+                    <h1 class="text-2xl font-bold text-white">School not found</h1>
+                  </div>
+                }
+              </div>
+              <div class="border-b border-t mt-10 border-white/10 p-6">
+                <dl class="flex flex-col space-y-4 text-sm text-slate-300">
+                  <div>
+                    <dt class="font-semibold text-white">Attendance time</dt>
+                    <dd>{{ schoolInfo()?.attendance_time?.texto ?? school()?.enrolled ?? 'Not available' }}</dd>
+                  </div>
+
+                  <div>
+                    <dt class="font-semibold text-white">Degree earned</dt>
+                    <dd>{{ schoolInfo()?.degree_earned ?? school()?.degree ?? 'Not available' }}</dd>
+                  </div>
+
+                  <div>
+                    <dt class="font-semibold text-white">Location</dt>
+                    <dd>{{ schoolInfo()?.location ?? school()?.location ?? 'Not available' }}</dd>
+                  </div>
+                </dl>
               </div>
             </div>
-          </div>
-        </section>
 
-        <section class="border-t border-white/10 bg-slate-900/60">
-          <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-            <div class="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p class="text-sm font-medium uppercase tracking-[0.2em] text-cyan-400">Learning Journey</p>
-                <h2 class="text-3xl font-bold tracking-tight text-white">
-                  What did I learn at {{ schoolInfo()?.institucion ?? school()?.name ?? 'this institution' }}?
+            <div class="mt-auto p-6">
+              <div class="mb-4">
+                <p class="text-xs font-medium uppercase tracking-[0.2em] text-cyan-400">Campus Location</p>
+                <h3 class="mt-2 text-lg font-semibold text-white">This is where I studied</h3>
+                <p class="mt-1 text-sm text-slate-300">
+                  {{ schoolInfo()?.location ?? school()?.location ?? 'Location not available' }}
+                </p>
+              </div>
+              <div class="overflow-hidden rounded-2xl border border-cyan-400/20 bg-white/5 shadow-lg shadow-cyan-500/10">
+                @if (mapUrl()) {
+                  <iframe
+                    [src]="mapUrl()"
+                    class="h-64 w-full"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    [title]="(schoolInfo()?.institucion ?? school()?.name ?? 'School') + ' map'"
+                  ></iframe>
+                }
+              </div>
+            </div>
+          </aside>
+
+          <div class="space-y-8">
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+              <div class="mb-4 flex items-center justify-between gap-4">
+                <h2 class="text-2xl font-bold tracking-tight text-white">
+                  {{ schoolInfo()?.about?.titulo ?? 'Why this institution?' }}
                 </h2>
+                <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-300">
+                  {{ schoolInfo()?.programa ?? 'College Experience' }}
+                </span>
               </div>
 
-              <div class="flex flex-wrap items-center gap-3">
-                <div class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
-                  {{ visibleClassRangeStart() }}-{{ visibleClassRangeEnd() }} of {{ schoolClasses().length }} classes
-                </div>
-
-                @if (schoolClasses().length > 6) {
-                  <div class="flex gap-3">
-                    <button
-                      type="button"
-                      (click)="previousClassPage()"
-                      [disabled]="!hasPreviousClassPage()"
-                      class="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
-                      aria-label="Previous classes"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                      </svg>
-                    </button>
-
-                    <button
-                      type="button"
-                      (click)="nextClassPage()"
-                      [disabled]="!hasNextClassPage()"
-                      class="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
-                      aria-label="Next classes"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                      </svg>
-                    </button>
-                  </div>
-                }
-              </div>
-            </div>
-
-            <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              @if (schoolClasses().length) {
-                @for (schoolClass of visibleClasses(); track schoolClass.id) {
-                  <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl transition hover:-translate-y-1 hover:bg-white/10">
-                    <img
-                      [src]="schoolClass.image"
-                      [alt]="schoolClass.course"
-                      class="h-56 w-full object-cover"
-                    />
-                    <div class="space-y-4 p-6">
-                      <div>
-                        <p class="text-sm font-medium text-cyan-400">{{ schoolClass.department }}</p>
-                        <h3 class="mt-1 text-xl font-semibold text-white">{{ schoolClass.course }}</h3>
-                      </div>
-                      <p class="text-sm leading-6 text-slate-300">
-                        {{ schoolClass.description }}
-                      </p>
-                    </div>
-                  </article>
-                }
-              } @else {
-                <article class="rounded-3xl border border-dashed border-white/10 bg-white/5 p-8 text-center text-slate-300 shadow-xl sm:col-span-2 xl:col-span-3">
-                  No classes available for this institution yet.
-                </article>
-              }
-            </div>
-
-            <article class="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-              <h2 class="text-2xl font-bold tracking-tight text-white">
-                More about {{ schoolInfo()?.programa ?? schoolInfo()?.institucion ?? school()?.name ?? 'this institution' }}
-              </h2>
-
-              <div class="prose prose-invert mt-4 max-w-none prose-p:text-slate-300 prose-a:text-cyan-400">
-                <p>
-                  {{ schoolInfo()?.institucion ?? school()?.name ?? 'This institution' }} was a key step in my academic
-                  path, where I focused on {{ schoolInfo()?.programa ?? 'my degree program' }}.
-                </p>
-
-                <p>
-                  I studied there during {{ schoolInfo()?.attendance_time?.texto ?? 'my academic stage' }},
-                  and that experience helped me grow both technically and professionally.
-                </p>
-
-                <p>
-                  The program awarded was {{ schoolInfo()?.degree_earned ?? school()?.degree ?? 'not available' }},
-                  and the campus is located in {{ schoolInfo()?.location ?? school()?.location ?? 'an unspecified location' }}.
-                </p>
+              <div class="prose prose-invert max-w-none prose-p:text-slate-300">
+                <p>{{ schoolInfo()?.about?.descripcion ?? 'Information not available.' }}</p>
               </div>
             </article>
+
+            <div class="grid gap-6 md:grid-cols-2">
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+                <h3 class="mb-4 text-xl font-semibold text-white">Rankings</h3>
+
+                <ul class="space-y-3 text-slate-300">
+                  @for (ranking of schoolInfo()?.rankings ?? []; track $index) {
+                    <li class="rounded-2xl bg-white/5 px-4 py-3">{{ ranking }}</li>
+                  }
+                  @if (schoolInfo()?.abet_image) {
+                    <li class="rounded-2xl bg-white/5 px-4 py-3">
+                      <img
+                        [src]="schoolInfo()!.abet_image"
+                        alt="Accreditation image"
+                        class="h-10 w-auto rounded bg-white p-1"
+                      />
+                    </li>
+                  }
+                </ul>
+              </article>
+
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur min-h-105 max-h-100">
+                <h3 class="mb-4 text-xl font-semibold text-white">
+                  {{ schoolInfo()?.highlight?.titulo ?? 'Highlight' }}
+                </h3>
+
+                <div class="overflow-hidden rounded-2xl bg-white/5">
+                  @if (schoolInfo()?.highlight?.imagen) {
+                    <img
+                      [src]="schoolInfo()!.highlight.imagen"
+                      [alt]="schoolInfo()!.highlight.nombre"
+                      class="h-64 w-full object-cover"
+                    />
+                  }
+                  <div class="p-1">
+                    <h4 class="text-lg font-semibold text-white">
+                      {{ schoolInfo()?.highlight?.nombre ?? 'School highlight' }}
+                    </h4>
+                    <p class="mt-2 text-sm text-slate-300">
+                      {{ schoolInfo()?.highlight?.descripcion ?? 'Information not available.' }}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
-        </section>
-      </main>
-    </div>
-  </body>
-</html>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 bg-slate-900/60">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div class="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.2em] text-cyan-400">Learning Journey</p>
+              <h2 class="text-3xl font-bold tracking-tight text-white">
+                What did I learn at {{ schoolInfo()?.institucion ?? school()?.name ?? 'this institution' }}?
+              </h2>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <div class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                {{ visibleClassRangeStart() }}-{{ visibleClassRangeEnd() }} of {{ schoolClasses().length }} classes
+              </div>
+
+              @if (schoolClasses().length > 6) {
+                <div class="flex gap-3">
+                  <button
+                    type="button"
+                    (click)="previousClassPage()"
+                    [disabled]="!hasPreviousClassPage()"
+                    class="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
+                    aria-label="Previous classes"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                  </button>
+
+                  <button
+                    type="button"
+                    (click)="nextClassPage()"
+                    [disabled]="!hasNextClassPage()"
+                    class="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
+                    aria-label="Next classes"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            @if (schoolClasses().length) {
+              @for (schoolClass of visibleClasses(); track schoolClass.id) {
+                <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl transition hover:-translate-y-1 hover:bg-white/10">
+                  <img
+                    [src]="schoolClass.image"
+                    [alt]="schoolClass.course"
+                    class="h-56 w-full object-cover"
+                  />
+                  <div class="space-y-4 p-6">
+                    <div>
+                      <p class="text-sm font-medium text-cyan-400">{{ schoolClass.department }}</p>
+                      <h3 class="mt-1 text-xl font-semibold text-white">{{ schoolClass.course }}</h3>
+                    </div>
+                    <p class="text-sm leading-6 text-slate-300">
+                      {{ schoolClass.description }}
+                    </p>
+                  </div>
+                </article>
+              }
+            } @else {
+              <article class="rounded-3xl border border-dashed border-white/10 bg-white/5 p-8 text-center text-slate-300 shadow-xl sm:col-span-2 xl:col-span-3">
+                No classes available for this institution yet.
+              </article>
+            }
+          </div>
+
+          <article class="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+            <h2 class="text-2xl font-bold tracking-tight text-white">
+              More about {{ schoolInfo()?.programa ?? schoolInfo()?.institucion ?? school()?.name ?? 'this institution' }}
+            </h2>
+
+            <div class="prose prose-invert mt-4 max-w-none prose-p:text-slate-300 prose-a:text-cyan-400">
+              <p>
+                {{ schoolInfo()?.institucion ?? school()?.name ?? 'This institution' }} was a key step in my academic
+                path, where I focused on {{ schoolInfo()?.programa ?? 'my degree program' }}.
+              </p>
+
+              <p>
+                I studied there during {{ schoolInfo()?.attendance_time?.texto ?? 'my academic stage' }},
+                and that experience helped me grow both technically and professionally.
+              </p>
+
+              <p>
+                The program awarded was {{ schoolInfo()?.degree_earned ?? school()?.degree ?? 'not available' }},
+                and the campus is located in {{ schoolInfo()?.location ?? school()?.location ?? 'an unspecified location' }}.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+

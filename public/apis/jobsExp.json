@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "company": "Comware S. A.",
+    "position": "Specialist Engineer",
+    "startDate": "2025-07-21",
+    "endDate": "Present",
+    "technologies": [
+      "OCI",
+      "Kubernetes",
+      "Networking",
+      "Oracle Database",      
+      "Oracle WebLogic",
+      "Oracle HTTP Server"
+    ],
+    "description": [
+      "Managed and engineered Oracle Database environments, including installation, configuration, maintenance, and support, with experience in Oracle ASM, monitoring, basic performance tuning, and day-to-day operational management.",
+      "Deployed and administered infrastructure in Oracle Cloud Infrastructure (OCI), including tenancies, virtual machines, networking components such as VCNs, subnets, route tables, security lists and NSGs, load balancers, and related cloud services.",
+      "Implemented and supported Kubernetes environments through Oracle Kubernetes Engine (OKE) for microservices-based platforms, contributing to the availability, stability, and operational performance of the environment.",
+      "Served as technical lead for the Oracle Banking Digital Experience (OBDX) project between Banco del Austro and Oracle, coordinating technical efforts, defining architecture, supporting deployments, and troubleshooting issues end-to-end.",
+      "Administered middleware platforms including Oracle WebLogic Server and Oracle HTTP Server (OHS), handling configuration, application deployments, hardening, and operational support."
+    ]
+  },
+  {
+    "id": 2,
+    "company": "TechSolutions Ecuador",
+    "position": "Systems Engineer",
+    "startDate": "2023-01-09",
+    "endDate": "2025-07-18",
+    "technologies": [
+      "Linux",
+      "Oracle Linux"
+    ],
+    "description": [
+      "Administered Linux-based servers and enterprise infrastructure, ensuring system availability, patching, monitoring, and operational continuity across development and production environments.",
+      "Supported virtualization and container-based environments using VMware and Docker, helping development teams deploy and maintain internal applications efficiently.",
+      "Managed networking tasks including IP addressing, firewall rules, connectivity troubleshooting, and coordination with infrastructure teams to maintain secure and stable environments.",
+      "Performed database administration and support tasks for MySQL environments, including backups, basic tuning, user management, and incident resolution.",
+      "Collaborated with cross-functional teams to troubleshoot infrastructure and application issues, document technical procedures, and improve operational processes."
+    ]
+  }
+]
