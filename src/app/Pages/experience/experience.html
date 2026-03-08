@@ -1,0 +1,230 @@
+<body
+    class="bg-deep-charcoal text-gray-200 font-display h-screen overflow-hidden flex flex-col antialiased selection:bg-primary selection:text-white">
+    <div class="flex flex-1 overflow-hidden h-[calc(100vh-80px)]">
+        <aside class="w-72 bg-gradient-to-b from-white/5 to-transparent border-r border-dark-border p-8 overflow-y-hidden flex-shrink-0">
+            <h2 class="text-lg font-bold mb-6 text-white border-b border-dark-border pb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">filter_list</span>
+                Filters
+            </h2>
+            <div class="mb-8">
+                <h3 class="text-primary font-semibold mb-4 text-xs uppercase tracking-wider opacity-80">Role Type</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input checked=""
+                            class="form-checkbox h-4 w-4 text-primary rounded border-gray-600 bg-gray-800 focus:ring-primary focus:ring-offset-gray-900 transition duration-150 ease-in-out"
+                            type="checkbox" />
+                        <span class="text-sm text-gray-400 group-hover:text-white transition-colors">Full-time</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input
+                            class="form-checkbox h-4 w-4 text-primary rounded border-gray-600 bg-gray-800 focus:ring-primary focus:ring-offset-gray-900 transition duration-150 ease-in-out"
+                            type="checkbox" />
+                        <span class="text-sm text-gray-400 group-hover:text-white transition-colors">Contract</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input
+                            class="form-checkbox h-4 w-4 text-primary rounded border-gray-600 bg-gray-800 focus:ring-primary focus:ring-offset-gray-900 transition duration-150 ease-in-out"
+                            type="checkbox" />
+                        <span class="text-sm text-gray-400 group-hover:text-white transition-colors">Freelance</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-primary font-semibold mb-4 text-xs uppercase tracking-wider opacity-80">Industry</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input checked=""
+                            class="form-checkbox h-4 w-4 text-primary rounded border-gray-600 bg-gray-800 focus:ring-primary focus:ring-offset-gray-900 transition duration-150 ease-in-out"
+                            type="checkbox" />
+                        <span class="text-sm text-gray-400 group-hover:text-white transition-colors">FinTech</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input
+                            class="form-checkbox h-4 w-4 text-primary rounded border-gray-600 bg-gray-800 focus:ring-primary focus:ring-offset-gray-900 transition duration-150 ease-in-out"
+                            type="checkbox" />
+                        <span class="text-sm text-gray-400 group-hover:text-white transition-colors">E-commerce</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input
+                            class="form-checkbox h-4 w-4 text-primary rounded border-gray-600 bg-gray-800 focus:ring-primary focus:ring-offset-gray-900 transition duration-150 ease-in-out"
+                            type="checkbox" />
+                        <span class="text-sm text-gray-400 group-hover:text-white transition-colors">Healthcare</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+        <main class="flex-1 flex overflow-hidden relative bg-deep-charcoal">
+            
+            <div class="flex-1  p-8 md:p-12 overflow-y-hidden">
+                <app-navbar></app-navbar>
+                
+                <div class="max-w-4xl max-h-screen mx-auto h-fit overflow-y-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+                        <div class="flex bg-dark-surface p-1 rounded-lg border border-dark-border">
+                            <button
+                                class="px-6 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 transition-colors">Projects</button>
+                            <button
+                                class="px-6 py-2 rounded-md text-sm font-bold bg-primary text-gray-900 shadow-lg shadow-primary/20 transition-all">Work
+                                Experience</button>
+                        </div>
+                        <div
+                            class="flex items-center space-x-2 bg-dark-surface p-1.5 rounded-full shadow-lg border border-dark-border w-full md:w-auto focus-within:border-primary/50 transition-colors">
+                            <input
+                                class="bg-transparent border-none text-sm focus:ring-0 w-full md:w-64 text-gray-200 placeholder-gray-500 pl-4"
+                                placeholder="Search roles or companies..." type="text" />
+                            <button
+                                class="p-2 bg-card-dark hover:bg-primary text-gray-300 hover:text-gray-900 rounded-full transition-colors flex items-center justify-center">
+                                <span class="material-symbols-outlined text-lg">search</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative pl-4 md:pl-8 border-l border-dark-border space-y-12 ml-3">
+                        <div class="relative group">
+                            <div
+                                class="absolute -left-[23px] md:-left-[39px] bg-gradient-to-b from-white/5 to-transparent border-2 border-dark-border group-hover:border-primary rounded-full w-4 h-4 mt-1.5 transition-colors duration-300 shadow-[0_0_0_4px_#121212]">
+                            </div>
+                            <div draggable="true"
+                                class="bg-gradient-to-b from-white/5 to-transparent rounded-2xl p-6 shadow-xl border border-dark-border hover:border-primary/50 transition-all duration-300 cursor-pointer relative overflow-hidden group-hover:shadow-primary/5">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-50">
+                                </div>
+                                <div
+                                    class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 relative z-10 ">
+                                    <div>
+                                        <h3
+                                            class="text-2xl font-bold text-white group-hover:text-primary transition-colors">
+                                            Senior Frontend Engineer</h3>
+                                        <div class="text-lg text-gray-400 font-medium flex items-center gap-2 mt-1">
+                                            <span class="material-symbols-outlined text-sm">business</span>
+                                            TechFlow Systems
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-2 md:mt-0 px-3 py-1 bg-dark-surface rounded-lg border border-dark-border text-xs font-mono text-primary whitespace-nowrap">
+                                        2022 - Present
+                                    </div>
+                                </div>
+                                <p class="text-gray-400 mb-6 leading-relaxed relative z-10">
+                                    Spearheaded the migration of legacy monolithic architecture to micro-frontends using
+                                    React and module federation. Improved application load times by 40% and established
+                                    a comprehensive design system adopted across 5 product lines.
+                                </p>
+                                <div class="flex flex-wrap gap-2 relative z-10">
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-300 border border-dark-border hover:border-gray-500 transition-colors">React</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-300 border border-dark-border hover:border-gray-500 transition-colors">TypeScript</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-300 border border-dark-border hover:border-gray-500 transition-colors">GraphQL</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-300 border border-dark-border hover:border-gray-500 transition-colors">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute -left-[23px] md:-left-[39px] bg-deep-charcoal border-2 border-dark-border group-hover:border-primary rounded-full w-4 h-4 mt-1.5 transition-colors duration-300 shadow-[0_0_0_4px_#121212]">
+                            </div>
+                            <div
+                                class="bg-card-dark rounded-2xl p-6 shadow-md border border-dark-border hover:border-gray-500 transition-all duration-300 cursor-pointer opacity-80 hover:opacity-100 hover:shadow-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                            Software Developer</h3>
+                                        <div class="text-base text-gray-400 font-medium flex items-center gap-2 mt-1">
+                                            <span class="material-symbols-outlined text-sm">business</span>
+                                            Nexus Digital
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-2 md:mt-0 px-3 py-1 bg-dark-surface rounded-lg border border-dark-border text-xs font-mono text-gray-400 whitespace-nowrap">
+                                        2020 - 2022
+                                    </div>
+                                </div>
+                                <p class="text-gray-400 mb-6 leading-relaxed">
+                                    Developed high-performance e-commerce interfaces handling 100k+ daily users.
+                                    Optimized checkout flows resulting in a 15% increase in conversion rates.
+                                    Collaborated closely with UX designers to implement pixel-perfect responsive
+                                    layouts.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-400 border border-dark-border">Vue.js</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-400 border border-dark-border">Node.js</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-400 border border-dark-border">SASS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute -left-[23px] md:-left-[39px] bg-deep-charcoal border-2 border-dark-border group-hover:border-primary rounded-full w-4 h-4 mt-1.5 transition-colors duration-300 shadow-[0_0_0_4px_#121212]">
+                            </div>
+                            <div
+                                class="bg-card-dark rounded-2xl p-6 shadow-md border border-dark-border hover:border-gray-500 transition-all duration-300 cursor-pointer opacity-60 hover:opacity-100 hover:shadow-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                            Junior Web Developer</h3>
+                                        <div class="text-base text-gray-400 font-medium flex items-center gap-2 mt-1">
+                                            <span class="material-symbols-outlined text-sm">business</span>
+                                            Creative Spark Studio
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-2 md:mt-0 px-3 py-1 bg-dark-surface rounded-lg border border-dark-border text-xs font-mono text-gray-500 whitespace-nowrap">
+                                        2018 - 2020
+                                    </div>
+                                </div>
+                                <p class="text-gray-500 mb-6 leading-relaxed">
+                                    Built and maintained client websites using HTML, CSS, and JavaScript. Implemented
+                                    CMS solutions and ensured cross-browser compatibility.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-500 border border-dark-border">HTML/CSS</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-500 border border-dark-border">jQuery</span>
+                                    <span
+                                        class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-500 border border-dark-border">PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside
+                class="hidden xl:flex w-80 bg-sidebar-dark border-l border-dark-border p-6 flex-col items-center justify-center relative shadow-2xl z-10">
+                <div
+                    class="absolute top-10 transform -translate-y-1/2 bg-primary/10 text-primary font-bold px-6 py-3 rounded-xl shadow-lg border border-primary/20 text-center w-64 z-20 backdrop-blur-sm">
+                    Show role details
+                </div>
+                <div
+                    class="w-full bg-card-dark rounded-xl p-4 shadow-inner relative mt-8 h-[60%] flex flex-col border border-dark-border">
+                    <div
+                        class="flex-1 border-2 border-dashed border-gray-700 rounded-lg flex flex-col items-center justify-center group hover:border-primary/50 hover:bg-dark-surface transition-all duration-300 bg-gray-900/50">
+                        <div class="relative mb-4">
+                            <span
+                                class="material-symbols-outlined text-6xl text-gray-700 group-hover:text-primary transition-colors">work_history</span>
+                            <span
+                                class="material-symbols-outlined text-4xl text-white absolute -bottom-2 -right-2 drop-shadow-md">touch_app</span>
+                        </div>
+                        <span class="text-gray-500 font-medium group-hover:text-primary transition-colors">Drop role
+                            here</span>
+                    </div>
+                    <div class="mt-4 bg-dark-surface rounded-lg p-4 text-center border border-dark-border shadow-sm">
+                        <p class="text-sm text-gray-400 leading-snug">
+                            Drag a work experience card into this area to view full job description, achievements, and
+                            technology stack.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        
+    </div>
+</body>
+

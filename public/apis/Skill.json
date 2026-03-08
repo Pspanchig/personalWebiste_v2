@@ -1,0 +1,70 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "nombre": "React",
+      "nivel": 75,
+      "imagen": "https://www.svgrepo.com/show/354259/react.svg"
+    },
+    {
+      "id": 2,
+      "nombre": "Angular",
+      "nivel": 70,
+      "imagen": "https://www.svgrepo.com/show/353396/angular-icon.svg"
+    },
+    {
+      "id": 3,
+      "nombre": "TypeScript",
+      "nivel": 73,
+      "imagen": "https://www.svgrepo.com/show/374146/typescript-official.svg"
+    },
+    {
+      "id": 4,
+      "nombre": "JavaScript",
+      "nivel": 80,
+      "imagen": "https://www.svgrepo.com/show/349419/javascript.svg"
+    },
+    {
+      "id": 5,
+      "nombre": "HTML",
+      "nivel": 95,
+      "imagen": "https://www.svgrepo.com/show/452228/html-5.svg"
+    },
+    {
+      "id": 6,
+      "nombre": "CSS",
+      "nivel": 84,
+      "imagen": "https://www.svgrepo.com/show/452185/css-3.svg"
+    },
+    {
+      "id": 7,
+      "nombre": "C#",
+      "nivel": 70,
+      "imagen": "hthttps://www.svgrepo.com/show/376369/dotnet.svg"
+    },
+    {
+      "id": 8,
+      "nombre": "Java",
+      "nivel": 65,
+      "imagen": "https://www.svgrepo.com/show/452234/java.svg"
+    },
+    {
+      "id": 9,
+      "nombre": "Oracle DB",
+      "nivel": 75,
+      "imagen": "https://www.svgrepo.com/show/355152/oracle.svg"
+    },
+    {
+      "id": 10,
+      "nombre": "PostgreSQL",
+      "nivel": 60,
+      "imagen": "https://www.svgrepo.com/show/354200/postgresql.svg"
+    },
+    {
+      "id": 11,
+      "nombre": "Linux",
+      "nivel": 72,
+      "imagen": "https://www.svgrepo.com/show/448236/linux.svg"
+    }
+  ]
+}

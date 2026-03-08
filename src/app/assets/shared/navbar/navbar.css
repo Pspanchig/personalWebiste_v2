@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 72rem; 
+}
+:host {
+  display: block;
+  width: 100%;
+  max-width: 72rem; /* max-w-6xl */
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #e4e4e7;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.clicked{
+color: white;
+font-weight: bold;
+}

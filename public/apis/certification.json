@@ -1,0 +1,54 @@
+{
+  "licencias_y_certificaciones": [
+    {
+      "id": 1,
+      "nombre": "Oracle Cloud Infrastructure 2025 Migration Architect Certified Professional",
+      "entidad_emisora": "Oracle",
+      "fecha_expedicion": "2025-12",
+      "fecha_vencimiento": "2027-12",
+      "id_credencial": null,
+      "url_credencial": "",
+      "imagen": "https://th.bing.com/th/id/R.26dcb26946fd542ff15a8d5fbd53b180?rik=8BN0pzFHaBWaOA&pid=ImgRaw&r=0" 
+    },
+    {
+      "id": 2,
+      "nombre": "Oracle AI Cloud Database Services 2025 Certified Professional",
+      "entidad_emisora": "Oracle",
+      "fecha_expedicion": "2025-12",
+      "fecha_vencimiento": "2027-12",
+      "id_credencial": "102242131ODBCS25CP",
+      "url_credencial": "",
+      "imagen": "https://th.bing.com/th/id/R.26dcb26946fd542ff15a8d5fbd53b180?rik=8BN0pzFHaBWaOA&pid=ImgRaw&r=0" 
+    },
+    {
+      "id": 3,
+      "nombre": "Oracle Cloud Infrastructure 2025 Certified Networking Professional",
+      "entidad_emisora": "Oracle",
+      "fecha_expedicion": "2025-10",
+      "fecha_vencimiento": "2027-10",
+      "id_credencial": "102242131OCI25NWOCP",
+      "url_credencial": "",
+      "imagen": "https://th.bing.com/th/id/R.26dcb26946fd542ff15a8d5fbd53b180?rik=8BN0pzFHaBWaOA&pid=ImgRaw&r=0" 
+    },
+    {
+      "id": 4,
+      "nombre": "Oracle Cloud Infrastructure 2025 Certified Architect Associate",
+      "entidad_emisora": "Oracle",
+      "fecha_expedicion": "2025-08",
+      "fecha_vencimiento": "2027-08",
+      "id_credencial": "102242131OCI25CAA",
+      "url_credencial": "",
+      "imagen": "https://th.bing.com/th/id/R.26dcb26946fd542ff15a8d5fbd53b180?rik=8BN0pzFHaBWaOA&pid=ImgRaw&r=0" 
+    },
+    {
+     "id": 5,
+      "nombre": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+      "entidad_emisora": "Oracle",
+      "fecha_expedicion": "2025-08",
+      "fecha_vencimiento": "2027-08",
+      "id_credencial": "102242131OCI25FNDCFA",
+      "url_credencial": "",
+      "imagen": "https://th.bing.com/th/id/R.26dcb26946fd542ff15a8d5fbd53b180?rik=8BN0pzFHaBWaOA&pid=ImgRaw&r=0" 
+    }
+  ]
+}

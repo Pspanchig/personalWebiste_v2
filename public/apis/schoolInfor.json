@@ -1,0 +1,92 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "institucion": "Snow College",
+      "programa": "Associate of Science",
+      "attendance_time": {
+        "inicio": "2022-08",
+        "fin": "2023-12",
+        "texto": "August 2022 - December 2023"
+      },
+      "degree_earned": "Associates of Science",
+      "location": "150 College Av, Ephraim, Utah",
+      "about": {
+        "titulo": "Why Snow?",
+        "descripcion": "I chose Snow College for my first two years of education in software engineering because it offered the ideal blend of academic challenge and a nurturing campus atmosphere. From the moment I set foot on campus, I sensed the tight-knit community that thrives in smaller class settings. This close environment made it easy to interact with professors, who were genuinely interested in helping me succeed. Their mentorship not only strengthened my foundational coding skills and problem-solving abilities, but also inspired me to explore new areas of tech with confidence and curiosity. Another reason Snow College stood out is its practical, hands-on approach. Rather than just memorizing theory, I worked on real-world projects that helped me understand the bigger picture of software development. This approach, paired with the supportive culture among fellow students, fostered a sense of teamwork that’s often missing in large, impersonal universities. On top of that, the beautiful surroundings and smaller campus helped me stay focused and motivated, while still offering enough activities and events to round out my college experience. Ultimately, Snow College gave me both the technical grounding and personal growth I needed to take the next steps in my career as a software engineer."
+      },
+      "rankings": [
+        "#33 in Regional Colleges West",
+        "#11 in Top Public Schools",
+        "#236-286 in Engineering Programs",
+        "ABET Accredited"
+      ],
+      "abet_image": "https://www.millersville.edu/computerscience/img/abet-cac-2x.png",
+      "highlight": {
+        "titulo": "Mascot",
+        "nombre": "Badger!",
+        "imagen": "https://i.pinimg.com/originals/52/2e/5a/522e5a1a82af633116221954f56bca3a.jpg",
+        "descripcion": "A symbol of school spirit, resilience, and campus pride."
+      }
+    },
+    {
+      "id": 2,
+      "institucion": "University of Central Missouri",
+      "short_name": "UCMO",
+      "programa": "Bachelor in Computer Software Engineering",
+      "attendance_time": {
+        "inicio": "2024-01",
+        "fin": "2025-05",
+        "texto": "January 2024 - May 2025"
+      },
+      "degree_earned": "Bachelor in Computer Software Engineering",
+      "location": "116 W South St, Warrensburg, MO",
+      "about": {
+        "titulo": "Why UCM?",
+        "descripcion": "I chose the University of Central Missouri (UCM) for my software engineering degree because its curriculum seamlessly integrates theory with practical application. UCM emphasizes real-world development practices—such as agile methodologies, code reviews, and collaborative project work—that closely mirror industry standards. This hands-on approach allowed me to work on team projects in simulated software development environments, honing skills in version control, debugging, and system design while gaining experience with cutting-edge tools. The faculty at UCM are experts who prepare students for evolving technical challenges. Their mentorship guided me through complex algorithms, architectural design, and performance optimization, while smaller class sizes enabled personalized feedback and deep engagement. UCM’s collaborative culture also extended beyond the classroom through developer clubs and hackathons, reinforcing teamwork and adaptability. Overall, UCM provided a strong technical foundation, instilled best practices, and prepared me to tackle complex problems in a fast-paced software engineering career."
+      },
+      "rankings": [
+        "#22 in Top Public Schools",
+        "#73 in Regional Universities Midwest",
+        "#203 in Engineering Programs category",
+        "ABET Accredited"
+      ],
+      "abet_image": "https://www.millersville.edu/computerscience/img/abet-cac-2x.png",
+      "highlight": {
+        "titulo": "Mascot",
+        "nombre": "Mule",
+        "imagen": "https://www.ucmo.edu/offices/integrated-marketing-and-communications/internal-resources/fac-staff/ucm-branding/ucm-logos/images/mule-rt-b.png",
+        "descripcion": "A representation of UCM pride, perseverance, and school tradition."
+      }
+    },
+    {
+      "id": 3,
+      "institucion": "Universidad Internacional de Valencia",
+      "short_name": "VIU",
+      "programa": "Máster en Desarrollo de Aplicaciones y Servicios Web",
+      "attendance_time": {
+        "inicio": "2025-10",
+        "fin": "2026-10",
+        "texto": "October 2025 - October 2026"
+      },
+      "degree_earned": "Máster en Desarrollo de Aplicaciones y Servicios Web",
+      "location": "Calle Pintor Sorolla 21, 46002 Valencia, España",
+      "about": {
+        "titulo": "Why VIU?",
+        "descripcion": "I chose VIU for my master’s degree because it combines the flexibility of a 100% online university with an academic model designed around current industry demands. The master’s program in web development is aligned with full-stack engineering, allowing students to strengthen both front-end and back-end capabilities while gaining a broader understanding of digital product development. VIU also stands out for its international and professional orientation, which makes it especially attractive for students who want to continue building their careers while studying. Another important reason is the university’s strong emphasis on employability and student support. Its digital methodology, expert faculty, and innovative academic environment create a learning experience that is practical, modern, and adaptable to real-world software engineering challenges. For me, VIU represents an opportunity to deepen my expertise in web applications while earning an official European postgraduate degree from an institution recognized for online education excellence."
+      },
+      "rankings": [
+        "1st among 100% online universities in Spain for employability according to U-Ranking 2025",
+        "6th in employability among all universities in Spain according to U-Ranking 2025",
+        "Recognized by Forbes as one of the 25 best universities in Spain"
+      ],
+      "abet_image": "",
+      "highlight": {
+        "titulo": "Institutional Achievement",
+        "nombre": "Catalyst Awards Recognition",
+        "imagen": "",
+        "descripcion": "VIU has been recognized in the international Catalyst Awards for its student experience initiatives, standing out as the only Spanish university distinguished in that edition."
+      }
+    }
+  ]
+}

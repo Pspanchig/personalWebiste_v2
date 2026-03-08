@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Snow College",
+    "location": "Ephraim, Utah",
+    "enrolled": "Software Engineer",
+    "degree": "Associates AS",
+    "image": "https://www.wiche.edu/wp-content/uploads/2023/08/SnowCollege_Alt1Logo-2012.jpg"
+  },
+  {
+    "id": 2,
+    "name": "University of Central Missouri",
+    "location": "Warrensburg, Missouri",
+    "enrolled": "Software Engineer",
+    "degree": "Bachelor B.S",
+    "image": "https://images.higheredjobs.com/images/instProfile/logo-15818.jpg?12947219-09CE-561C-772DE3FC4965E5F4"
+  },
+  {
+    "id": 3,
+    "name": "Valencia International University",
+    "location": "Valencia, Spain",
+    "enrolled": "Web development Applications",
+    "degree": "Master",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc_2Rj7rtKz0RwRsh24k5DzTpiusE3gwT4Iw&s"
+  }
+]
