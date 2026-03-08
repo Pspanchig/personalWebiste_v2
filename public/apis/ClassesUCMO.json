@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "school": "University of Central Missouri",
+    "department": "Computer Science",
+    "course": "Computers & Modern Society",
+    "description": "Explored the technical, social, legal, ethical, and economic implications of computing from a computer science perspective. Developed a broader understanding of how technology shapes society and how ethical and professional considerations influence decision-making in the field.",
+    "image": "https://images.pexels.com/photos/9831612/pexels-photo-9831612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 2,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Software Requirements Engineering",
+    "description": "Developed skills in requirements engineering for software-intensive systems through a systematic approach to discovering, analyzing, modeling, documenting, and validating requirements. Gained both theoretical and practical experience in translating business and user needs into clear and actionable software specifications.",
+    "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 3,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Software Engineering",
+    "description": "Built a strong understanding of modern software development processes, including Agile, Lean, Scrum, and Kanban. Strengthened skills in software design, team collaboration, project management, and application development while gaining practical experience in managing software projects and addressing ethical issues in software engineering.",
+    "image": "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 4,
+    "school": "University of Central Missouri",
+    "department": "Computer Science",
+    "course": "Algorithm Design and Analysis",
+    "description": "Developed the ability to analyze and design efficient algorithms by studying classical algorithmic techniques and complexity analysis. Strengthened problem-solving skills through topics such as sorting, graph algorithms, and NP-completeness, with a focus on performance and computational efficiency.",
+    "image": "https://images.pexels.com/photos/17485707/pexels-photo-17485707/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-illustration-visualises-an-artificial-neural-network-as-physical-objects-the-complex-structure-represents-a-network-of-infor.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 5,
+    "school": "University of Central Missouri",
+    "department": "Computer Science",
+    "course": "Database Theory & Applications",
+    "description": "Built a solid foundation in database theory and application development, including E-R modeling, relational database design, normalization, SQL, security, and database administration. Applied this knowledge in practice through database-driven application design and a significant hands-on project.",
+    "image": "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 6,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Software Design & Architecture",
+    "description": "Gained in-depth knowledge of software design principles and software architecture, with practical experience applying design patterns and architectural approaches in real-world systems. Strengthened the ability to design scalable, maintainable, and well-structured software solutions through case studies and applied examples.",
+    "image": "https://images.pexels.com/photos/5582591/pexels-photo-5582591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 7,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Secure Software Engineering",
+    "description": "Developed an in-depth understanding of the secure software development lifecycle by evaluating each phase of development from a security perspective. Gained practical experience in risk analysis, static and dynamic analysis, penetration testing, and secure code review using industry best practices for secure software engineering.",
+    "image": "https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 8,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Senior Project",
+    "description": "Completed a semester-long capstone project involving the design, planning, implementation, testing, and deployment of a software solution as part of a team. Strengthened skills in software development, collaboration, project management, professional responsibility, and formal technical presentation.",
+    "image": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 9,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Software Testing & Quality Assurance",
+    "description": "Developed knowledge of software testing principles and quality assurance practices, including criteria-based test design, coverage analysis, input space partitioning, syntax-based testing, and the use of testing tools. Strengthened the ability to evaluate software quality and apply testing strategies within modern development environments such as SCRUM.",
+    "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 10,
+    "school": "University of Central Missouri",
+    "department": "Software Engineering",
+    "course": "Project Management",
+    "description": "Built foundational project management skills, including scope, time, and cost management, along with the use of software tools for planning and execution. Developed an understanding of how to guide projects toward successful outcomes and gained preparation relevant to professional project management practices.",
+    "image": "https://images.pexels.com/photos/10725897/pexels-photo-10725897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 11,
+    "school": "University of Central Missouri",
+    "department": "Cybersecurity",
+    "course": "Secure Programming",
+    "description": "Learned secure and reliable programming practices focused on identifying security vulnerabilities, converting noncompliant code into compliant code, and applying defensive programming techniques. Strengthened the ability to write more secure, robust, and resilient software.",
+    "image": "https://images.pexels.com/photos/5380643/pexels-photo-5380643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  }
+]

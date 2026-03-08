@@ -61,15 +61,15 @@
     },
     {
       "id": 3,
-      "institucion": "Universidad Internacional de Valencia",
+      "institucion": "Valencia International University",
       "short_name": "VIU",
-      "programa": "Máster en Desarrollo de Aplicaciones y Servicios Web",
+      "programa": "Master’s Degree in Web Application and Services Development",
       "attendance_time": {
         "inicio": "2025-10",
         "fin": "2026-10",
         "texto": "October 2025 - October 2026"
       },
-      "degree_earned": "Máster en Desarrollo de Aplicaciones y Servicios Web",
+      "degree_earned": "Master’s Degree in Web Application and Services Development",
       "location": "Calle Pintor Sorolla 21, 46002 Valencia, España",
       "about": {
         "titulo": "Why VIU?",

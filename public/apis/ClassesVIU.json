@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Web Security",
+    "description": "Developed knowledge of web security principles and best practices for protecting applications, data, and users. Strengthened the ability to identify common web vulnerabilities, apply secure development practices, and design more resilient web solutions.",
+    "image": "https://content.nordlayer.com/uploads/Web_application_security_cover_d0939937c6.png"
+  },
+  {
+    "id": 2,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Web Databases",
+    "description": "Built a solid foundation in web database design, management, and integration. Learned how to structure, query, and maintain data efficiently to support dynamic web applications and improve data-driven decision-making.",
+    "image": "https://www.netgen.co.za/wp-content/uploads/2024/10/Database-driven-web-applications-Netgen-custom-software.png"
+  },
+  {
+    "id": 3,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Web Software Engineering",
+    "description": "Developed an understanding of software engineering principles applied to web environments, including system design, development methodologies, and maintainable application architecture. Strengthened the ability to create scalable and reliable web-based software solutions.",
+    "image": "https://www.theladders.com/wp-content/uploads/coder_190517-800x450.jpg"
+  },
+  {
+    "id": 4,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Web Application Development I: Server-Side (Back-end)",
+    "description": "Built strong back-end development skills by learning how to design and implement server-side logic, manage databases, and create dynamic web applications. Strengthened the ability to develop robust, scalable, and data-driven web solutions.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D12AQE9KDPe-KE_cQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695744816253?e=2147483647&v=beta&t=RguMpFA-kyn-SWUnlVIynwWYC0OrNUzh2zL2VM4J_3g"
+  },
+  {
+    "id": 5,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Web Application Development II: Client-Side (Front-end) and Multimedia",
+    "description": "Developed front-end and multimedia skills to create interactive, user-centered web experiences. Learned how to build responsive client-side interfaces, improve usability, and integrate multimedia elements to enhance digital products.",
+    "image": "https://media.geeksforgeeks.org/wp-content/uploads/20240701150157/Backend-Development.webp"
+  },
+  {
+    "id": 6,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Programming for Mobile Devices (Wearables)",
+    "description": "Gained experience in developing applications for mobile and wearable devices, with a focus on usability, performance, and cross-platform digital experiences. Strengthened the ability to adapt software solutions to emerging device ecosystems.",
+    "image": "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/675a912860466d001ddb4b04.png"
+  },
+  {
+    "id": 7,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Web Data Analysis",
+    "description": "Developed the ability to analyze and interpret web-related data to support decision-making, performance evaluation, and user behavior insights. Strengthened analytical skills by working with data-driven approaches to optimize digital products and services.",
+    "image": "https://www.proserveit.com/hubfs/Data%20Analysis.png"
+  },
+  {
+    "id": 8,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Cloud Computing",
+    "description": "Built an understanding of cloud computing concepts using AWS, services, and architectures for deploying and managing modern applications. Strengthened knowledge of scalable infrastructure, cloud-based solutions, and the role of distributed systems in web development.",
+    "image": "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png"
+  },
+  {
+    "id": 9,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Project Management in Agile Environments",
+    "description": "Developed project management skills for agile environments, including iterative planning, team coordination, and adaptive delivery practices. Strengthened the ability to contribute effectively to collaborative projects using agile methodologies and modern workflow management approaches.",
+    "image": "https://sourceforge.net/articles/wp-content/uploads/2020/04/agile-project-management-definition-methodology.jpg"
+  },
+  {
+    "id": 10,
+    "school": "Valencia International University",
+    "department": "Web Development and Software Engineering",
+    "course": "Master’s Final Project",
+    "description": "Completed a master’s final project that integrated advanced knowledge in web development, software engineering, and applied problem-solving. Demonstrated the ability to design, develop, and present a comprehensive technical solution in a professional and academic context.",
+    "image": "https://www.orientsoftware.com/Themes/Content/Images/blog/2022-10-18/choosing-trusted-development-teams.jpg"
+  }
+]

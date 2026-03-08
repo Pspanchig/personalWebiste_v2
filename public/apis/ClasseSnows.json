@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "school": "Snow College",
+    "department": "Computer Science",
+    "course": "Fundamentals of Programming",
+    "description": "Built a strong foundation in computational thinking, problem-solving, and software development using C#. Learned how to design, write, test, and debug programs while applying core programming concepts such as variables, control structures, functions, and logical problem decomposition.",
+    "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 2,
+    "school": "Snow College",
+    "department": "Computer Science",
+    "course": "Object-Oriented Programming",
+    "description": "Developed a solid understanding of object-oriented programming principles, including encapsulation, inheritance, polymorphism, and abstraction. Strengthened programming skills by working with classes, objects, recursion, basic data structures, and fundamental algorithms to build more scalable and maintainable applications.",
+    "image": "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 3,
+    "school": "Snow College",
+    "department": "Computer Science",
+    "course": "Introduction to Web Development",
+    "description": "Gained foundational knowledge in web development, including website design, web publishing, programming, and database integration. Learned how modern websites are structured and maintained, while understanding the relationship between front-end interfaces, back-end logic, and data management.",
+    "image": "https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 4,
+    "school": "Snow College",
+    "department": "Computer Science",
+    "course": "Data Structures and Algorithms",
+    "description": "Acquired a deeper understanding of efficient problem-solving through data structures and algorithms. Worked with recursion, complexity analysis, and key strategies for optimizing performance, while studying and applying essential sorting and searching algorithms.",
+    "image": "https://images.pexels.com/photos/17483848/pexels-photo-17483848/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-depicts-a-look-inside-how-ai-microchips-are-designed-it-was-created-by-champ-panupong-techawongthawon-as-part-of-the-v.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 5,
+    "school": "Snow College",
+    "department": "Computer Science",
+    "course": "Digital Circuits",
+    "description": "Built a strong foundation in digital systems and hardware logic, including logic gates, combinational and sequential circuits, and circuit minimization techniques. Gained experience with encoders, decoders, multiplexers, programmable logic devices, and state machine design using Mealy and Moore models, along with an introduction to hardware description languages.",
+    "image": "https://images.pexels.com/photos/6636458/pexels-photo-6636458.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 6,
+    "school": "Snow College",
+    "department": "Computer Science",
+    "course": "Computer Organization and Architecture",
+    "description": "Developed an understanding of how computer systems operate at a low level, including assembly language programming, instruction sets, pipelining, and memory architecture. Strengthened knowledge of the relationship between hardware and software and how system design impacts computing performance.",
+    "image": "https://images.pexels.com/photos/5582591/pexels-photo-5582591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 7,
+    "school": "Snow College",
+    "department": "Software Engineering",
+    "course": "Back-end Web Development",
+    "description": "Learned to develop dynamic, data-driven web applications and APIs using modern back-end technologies and tools. Built practical skills in server-side development, database connectivity, application logic, and web architecture to support scalable and functional digital solutions.",
+    "image": "https://images.pexels.com/photos/2881233/pexels-photo-2881233.jpeg?auto=compress&cs=tinysrgb&w=600"
+  }
+]
