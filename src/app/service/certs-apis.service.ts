@@ -20,7 +20,7 @@ export interface CertAPI {
 export class CertsApisService {
   constructor(private http: HttpClient) {}
 
-  private base = '/apis/certification.json';
+  private base = 'apis/certification.json';
 
   list() {
     return this.http

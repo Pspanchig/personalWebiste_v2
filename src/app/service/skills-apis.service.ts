@@ -15,7 +15,7 @@ export interface SkillAPI{
 export class SkillsApisService {
   constructor(private http: HttpClient) {} 
 
-  private base = '/apis/Skill.json';
+  private base = 'apis/Skill.json';
 
   list() {
     return this.http

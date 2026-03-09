@@ -40,7 +40,7 @@ export interface SchoolInfo {
 export class SchoolInfoService {
   constructor(private http: HttpClient) {}
 
-  private base = '/apis/schoolInfor.json';
+  private base = 'apis/schoolInfor.json';
 
   list() {
     return this.http

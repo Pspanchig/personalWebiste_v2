@@ -17,7 +17,7 @@ export interface JobExperience {
 export class JobsExpService {
   constructor(private http: HttpClient) {}
 
-  private base = '/apis/jobsExp.json';
+  private base = 'apis/jobsExp.json';
 
   list() {
     return this.http.get<JobExperience[]>(this.base);

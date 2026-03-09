@@ -26,15 +26,15 @@ export class SchoolClassesService {
     const normalized = this.normalizeValue(schoolName);
 
     if (normalized.includes('snow')) {
-      return '/apis/ClasseSnows.json';
+      return 'apis/ClasseSnows.json';
     }
 
     if (normalized.includes('central missouri') || normalized === 'ucmo') {
-      return '/apis/ClassesUCMO.json';
+      return 'apis/ClassesUCMO.json';
     }
 
     if (normalized.includes('valencia international') || normalized === 'viu') {
-      return '/apis/ClassesVIU.json';
+      return 'apis/ClassesVIU.json';
     }
 
     return null;

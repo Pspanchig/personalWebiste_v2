@@ -17,7 +17,7 @@ export interface EducationAPI {
 export class EduactionApisService {
   constructor(private http: HttpClient) {} 
 
-  private base = '/apis/education.json';
+  private base = 'apis/education.json';
 
   list() {
     return this.http.get<EducationAPI[]>(this.base);
