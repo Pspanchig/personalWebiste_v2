@@ -35,26 +35,8 @@ jobs:
       - name: Build Angular app
         run: npm run build
 
-      - name: Prepare Pages artifact
-        run: |
-          mkdir -p dist/personalWebiste_v2/site/app
-          cp -r dist/personalWebiste_v2/browser/. dist/personalWebiste_v2/site/app/
-          cp dist/personalWebiste_v2/browser/CNAME dist/personalWebiste_v2/site/CNAME
-          cp dist/personalWebiste_v2/browser/404.html dist/personalWebiste_v2/site/404.html
-          cat <<'EOF' > dist/personalWebiste_v2/site/index.html
-          <!doctype html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <title>Redirecting...</title>
-            <meta http-equiv="refresh" content="0; url=/app/">
-            <script>
-              location.replace('/app/');
-            </script>
-          </head>
-          <body></body>
-          </html>
-          EOF
+      - name: Add SPA fallback
+        run: cp dist/personalWebiste_v2/browser/index.html dist/personalWebiste_v2/browser/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -62,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/personalWebiste_v2/site
+          path: dist/personalWebiste_v2/browser
 
   deploy:
     environment:
