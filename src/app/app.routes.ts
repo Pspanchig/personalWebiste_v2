@@ -6,11 +6,10 @@ import { Contact } from './Pages/contact/contact';
 import { InstitucionInfo } from './Pages/institucion-info/institucion-info';
 
 export const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'app' },
-    { path: 'app', pathMatch: 'full', component: Start },
-    { path: 'app/biography', component: Biography },
-    { path: 'app/experience', component: Experience },
-    { path: 'app/contact', component: Contact },
-    { path: 'app/school/:name', component: InstitucionInfo },
-    { path: '**', redirectTo: 'app' }
+    { path: '', component: Start },
+    { path: 'biography', component: Biography },
+    { path: 'experience', component: Experience },
+    { path: 'contact', component: Contact },
+    { path: 'school/:name', component: InstitucionInfo },
+    { path: '**', redirectTo: '' }
 ];
