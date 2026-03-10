@@ -3,9 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>PersonalWebisteV2</title>
-  <base href="/personalWebiste_v2">
+  <base href="/app/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    (function() {
+      var redirect = sessionStorage.getItem('redirect');
+      if (!redirect) return;
+      sessionStorage.removeItem('redirect');
+      var target = redirect.replace('/app/', '/');
+      if (target !== location.pathname + location.search + location.hash) {
+        history.replaceState(null, '', target);
+      }
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link
