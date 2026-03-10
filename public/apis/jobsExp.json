@@ -23,20 +23,19 @@
   },
   {
     "id": 2,
-    "company": "TechSolutions Ecuador",
-    "position": "Systems Engineer",
-    "startDate": "2023-01-09",
-    "endDate": "2025-07-18",
+    "company": "santiagopanchig.site",
+    "position": "Frontend Engineer",
+    "startDate": "2026-02-01",
+    "endDate": "2026-03-10",
     "technologies": [
-      "Linux",
-      "Oracle Linux"
+      "Angular",
+      "Tailwind",
+      "Github"
     ],
     "description": [
-      "Administered Linux-based servers and enterprise infrastructure, ensuring system availability, patching, monitoring, and operational continuity across development and production environments.",
-      "Supported virtualization and container-based environments using VMware and Docker, helping development teams deploy and maintain internal applications efficiently.",
-      "Managed networking tasks including IP addressing, firewall rules, connectivity troubleshooting, and coordination with infrastructure teams to maintain secure and stable environments.",
-      "Performed database administration and support tasks for MySQL environments, including backups, basic tuning, user management, and incident resolution.",
-      "Collaborated with cross-functional teams to troubleshoot infrastructure and application issues, document technical procedures, and improve operational processes."
+      "Designed and developed a responsive website using Angular and Tailwind CSS.",
+      "Built and refined the visual interface, focusing on layout, usability, and mobile responsiveness.",
+      "Managed the project repository and deployment workflow through GitHub."
     ]
   }
 ]

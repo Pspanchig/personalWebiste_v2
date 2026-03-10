@@ -54,8 +54,8 @@ body {
 .experience-timeline {
     position: relative;
     margin-left: 0.75rem;
-    min-height: calc(100vh - 240px);
-    max-height: calc(100vh - 240px);
+    min-height: auto;
+    max-height: none;
     overflow-y: auto;
     border-left: 1px solid #27272a;
     padding-left: 1rem;
@@ -110,6 +110,8 @@ body {
 
 @media (min-width: 768px) {
     .experience-timeline {
+        min-height: calc(100vh - 240px);
+        max-height: calc(100vh - 240px);
         padding-left: 2rem;
     }
 

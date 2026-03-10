@@ -1,6 +1,6 @@
 <body
-    class="bg-deep-charcoal text-gray-200 font-display h-screen overflow-hidden flex flex-col antialiased selection:bg-primary selection:text-white">
-    <div class="relative flex flex-1 overflow-hidden h-[calc(100vh-80px)]">
+    class="bg-deep-charcoal text-gray-200 font-display min-h-screen overflow-x-hidden overflow-y-auto lg:h-screen lg:overflow-hidden flex flex-col antialiased selection:bg-primary selection:text-white">
+    <div class="relative flex flex-1 overflow-x-hidden overflow-y-visible lg:overflow-hidden lg:h-[calc(100vh-80px)]">
         <aside class="absolute top-0 left-0 z-20 hidden h-full w-72 bg-gradient-to-b from-white/5 to-transparent border-r border-dark-border p-8 overflow-y-auto flex-shrink-0 lg:block">
             <h2 class="text-lg font-bold mb-6 text-white border-b border-dark-border pb-4 flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary">filter_list</span>
@@ -23,19 +23,19 @@
             </div>
         </aside>
 
-        <main class="flex-1 flex overflow-hidden relative bg-deep-charcoal">
-            <div class="flex-1 overflow-hidden px-8 pt-8 pb-0 md:px-12 md:pt-8 md:pb-0">
-                <div class="mx-auto flex h-full w-full max-w-4xl flex-col overflow-visible">
+        <main class="flex-1 flex overflow-x-hidden overflow-y-visible lg:overflow-hidden relative bg-deep-charcoal">
+            <div class="flex-1 overflow-x-hidden overflow-y-visible lg:overflow-hidden px-4 pt-8 pb-8 sm:px-6 md:px-12 md:pt-8 md:pb-0">
+                <div class="mx-auto flex h-auto lg:h-full w-full max-w-4xl flex-col overflow-visible">
                     <app-navbar></app-navbar>
 
-                    <aside class="mt-6 rounded-2xl border border-dark-border bg-gradient-to-b from-white/5 to-transparent p-6 shadow-glow shadow-glow-border lg:hidden">
+                    <aside class="mt-6 w-[96%] self-center rounded-2xl border border-dark-border border-r-white/15 bg-gradient-to-b from-white/5 to-transparent p-5 shadow-glow shadow-glow-border sm:w-full sm:p-6 lg:hidden">
                         <h2 class="text-lg font-bold mb-6 text-white border-b border-dark-border pb-4 flex items-center gap-2">
                             <span class="material-symbols-outlined text-primary">filter_list</span>
                             Filters
                         </h2>
-                        <div class="mb-8">
+                        <div class="mb-2">
                             <h3 class="text-primary font-semibold mb-4 text-xs uppercase tracking-wider opacity-80">Tech Stack</h3>
-                            <div class="space-y-3">
+                            <div class="max-h-[11rem] space-y-3 overflow-y-auto pr-1 custom-scrollbar">
                                 @for (technology of availableTechnologies(); track technology) {
                                     <label class="flex items-center space-x-3 cursor-pointer group">
                                         <input
@@ -50,7 +50,7 @@
                         </div>
                     </aside>
 
-                    <div class="mt-6 rounded-2xl bg-white/5 pb-0 pt-5 px-5 shadow-glow shadow-glow-border overflow-auto">
+                    <div class="mt-6 min-h-[32rem] rounded-2xl bg-white/5 pb-0 pt-5 px-5 shadow-glow shadow-glow-border overflow-auto lg:min-h-[36rem]">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
                             <div class="flex bg-dark-surface p-1 rounded-lg border border-dark-border">
                                 <button

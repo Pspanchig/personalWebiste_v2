@@ -6,25 +6,55 @@
 
 .navbar-shell {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-wrap: nowrap;
+  gap: 1rem;
   width: 100%;
   max-width: 72rem;
   margin: 0 auto 3rem;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar-shell::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 640px) {
   .navbar-shell {
-    gap: 1rem 1.5rem;
     margin-bottom: 2rem;
+    scroll-snap-type: x proximity;
   }
 }
 
 .nav-link {
   position: relative;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 0.2rem 0;
+  scroll-snap-align: center;
+}
+
+@media (min-width: 641px) {
+  .navbar-shell {
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
 }
 
 .nav-link::after {
