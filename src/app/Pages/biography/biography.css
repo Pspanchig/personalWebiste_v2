@@ -4,10 +4,8 @@
         }
 
         .glass-card {
-            background: rgba(24, 24, 27, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #191b21;
+            border: 1px solid #343944;
         }
 
         .nav-link {
@@ -47,9 +45,10 @@
         }
 
         .text-justify {
-            text-align: justify;
+            text-align: left;
+            max-width: 48rem;
         }
 
         .city-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }

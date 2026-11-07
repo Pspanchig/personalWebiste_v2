@@ -1,7 +1,10 @@
 <body
-    class="bg-deep-charcoal text-gray-200 font-display min-h-screen overflow-x-hidden overflow-y-auto lg:h-screen lg:overflow-hidden flex flex-col antialiased selection:bg-primary selection:text-white">
-    <div class="relative flex flex-1 overflow-x-hidden overflow-y-visible lg:overflow-hidden lg:h-[calc(100vh-80px)]">
-        <aside class="absolute top-0 left-0 z-20 hidden h-full w-72 bg-gradient-to-b from-white/5 to-transparent border-r border-dark-border p-8 overflow-y-auto flex-shrink-0 lg:block">
+    class="bg-background text-gray-200 font-sans min-h-screen overflow-x-hidden overflow-y-auto lg:h-screen lg:overflow-hidden flex flex-col antialiased selection:bg-primary selection:text-white">
+    <div class="relative z-30 flex shrink-0 justify-center px-4 pt-8 sm:px-8">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="relative flex flex-1 overflow-x-hidden overflow-y-visible lg:min-h-0 lg:overflow-hidden">
+        <aside class="experience-sidebar fixed inset-y-0 left-0 z-20 hidden w-72 border-r p-8 overflow-y-auto lg:block">
             <h2 class="text-lg font-bold mb-6 text-white border-b border-dark-border pb-4 flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary">filter_list</span>
                 Filters
@@ -23,12 +26,10 @@
             </div>
         </aside>
 
-        <main class="flex-1 flex overflow-x-hidden overflow-y-visible lg:overflow-hidden relative bg-deep-charcoal lg:pl-72">
-            <div class="flex-1 overflow-x-hidden overflow-y-visible lg:overflow-hidden px-4 pt-8 pb-8 sm:px-6 md:px-12 md:pt-8 md:pb-0">
+        <main class="flex-1 flex overflow-x-hidden overflow-y-visible lg:overflow-hidden relative lg:pl-72">
+            <div class="flex-1 overflow-x-hidden overflow-y-visible lg:overflow-hidden px-4 pb-8 sm:px-6 md:px-12 md:pb-0">
                 <div class="mx-auto flex h-auto lg:h-full w-full max-w-5xl flex-col overflow-visible">
-                    <app-navbar></app-navbar>
-
-                    <aside class="mt-6 w-[96%] self-center rounded-2xl border border-dark-border border-r-white/15 bg-gradient-to-b from-white/5 to-transparent p-5 shadow-glow shadow-glow-border sm:w-full sm:p-6 lg:hidden">
+                    <aside class="experience-filters mt-6 w-full self-center rounded-2xl border p-5 sm:p-6 lg:hidden">
                         <h2 class="text-lg font-bold mb-6 text-white border-b border-dark-border pb-4 flex items-center gap-2">
                             <span class="material-symbols-outlined text-primary">filter_list</span>
                             Filters
@@ -50,31 +51,62 @@
                         </div>
                     </aside>
 
-                    <div class="mt-6 min-h-[32rem] rounded-2xl bg-white/5 pb-0 pt-5 px-5 shadow-glow shadow-glow-border overflow-hidden lg:min-h-[36rem]">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+                    <div class="experience-panel mt-6 min-h-[32rem] rounded-2xl border pb-0 pt-5 px-5 overflow-hidden lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
+                        <div class="flex shrink-0 flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
                             <div class="flex bg-dark-surface p-1 rounded-lg border border-dark-border">
-                                <button
+                                <button type="button" (click)="selectTab('projects')" [class.experience-active]="activeTab() === 'projects'" [attr.aria-pressed]="activeTab() === 'projects'"
                                     class="px-6 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 transition-colors">Projects</button>
-                                <button
-                                    class="px-6 py-2 rounded-md text-sm font-bold bg-amber-400 text-white shadow-lg shadow-primary/20 transition-all">
-                                    WorkExperience
+                                <button type="button" (click)="selectTab('experience')" [class.experience-active]="activeTab() === 'experience'" [attr.aria-pressed]="activeTab() === 'experience'"
+                                    class="px-6 py-2 rounded-md text-sm font-semibold text-gray-400 hover:text-white hover:bg-white/5 transition-colors">
+                                    Work Experience
                                 </button>
                             </div>
                             <div
                                 class="flex items-center space-x-2 bg-dark-surface p-1.5 rounded-full shadow-lg border border-dark-border w-full md:w-auto focus-within:border-primary/50 transition-colors">
                                 <input
                                     #searchInput
+                                    [attr.aria-label]="activeTab() === 'projects' ? 'Search projects' : 'Search roles or companies'"
                                     (input)="updateSearch(searchInput.value)"
+                                    [value]="searchQuery()"
                                     class="bg-transparent border-none text-sm focus:ring-0 w-full md:w-64 text-gray-200 placeholder-gray-500 pl-4"
-                                    placeholder="Search roles or companies..."
+                                    [placeholder]="activeTab() === 'projects' ? 'Search projects...' : 'Search roles or companies...'"
                                     type="text" />
-                                <button
+                                <button type="button" aria-label="Search experience"
                                     class="p-2 bg-card-dark hover:bg-primary text-gray-300 hover:text-gray-900 rounded-full transition-colors flex items-center justify-center">
                                     <span class="material-symbols-outlined text-lg">search</span>
                                 </button>
                             </div>
                         </div>
 
+                        @if (activeTab() === 'projects') {
+                            <div class="project-list custom-scrollbar">
+                                @for (project of filteredProjects(); track project.id) {
+                                    <article class="experience-card">
+                                        <div class="flex items-start gap-4">
+                                            <div class="project-icon" aria-hidden="true"><span class="material-symbols-outlined">{{ project.icon }}</span></div>
+                                            <div class="min-w-0 flex-1">
+                                                <h3 class="text-xl font-semibold text-white">{{ project.name }}</h3>
+                                                <p class="mt-2 text-sm leading-relaxed text-gray-300">{{ project.description }}</p>
+                                                <div class="experience-tags mt-4">
+                                                    @for (technology of project.technologies; track technology) {
+                                                        <span class="px-3 py-1 rounded-md text-xs font-bold bg-dark-surface text-gray-300 border border-dark-border">{{ technology }}</span>
+                                                    }
+                                                </div>
+                                                @if (project.link) {
+                                                    <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-200 hover:text-white transition-colors">
+                                                        View Project <span aria-hidden="true" class="material-symbols-outlined text-sm">open_in_new</span>
+                                                    </a>
+                                                } @else {
+                                                    <span class="mt-5 inline-flex items-center gap-2 text-sm text-amber-200"><span aria-hidden="true" class="material-symbols-outlined text-sm">construction</span> In Development</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </article>
+                                } @empty {
+                                    <div class="rounded-2xl border border-dashed border-white/10 bg-white/5 p-8 text-center text-gray-400">No projects match the selected filters.</div>
+                                }
+                            </div>
+                        } @else {
                         <div class="experience-timeline custom-scrollbar">
                             @if (filteredJobs().length) {
                                 @for (job of filteredJobs(); track job.id) {
@@ -141,6 +173,7 @@
                                 </div>
                             }
                         </div>
+                        }
                     </div>
                 </div>
             </div>

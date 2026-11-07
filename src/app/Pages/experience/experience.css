@@ -57,13 +57,12 @@ body {
     min-height: auto;
     max-height: none;
     overflow-y: auto;
-    border-left: 1px solid #27272a;
+    border-left: 1px solid #343944;
     padding-left: 1rem;
 }
 
 .experience-item {
     position: relative;
-    min-height: 100%;
     padding-left: 0;
 }
 
@@ -76,14 +75,13 @@ body {
 
 .experience-card {
     position: relative;
-    min-height: 100%;
     overflow: hidden;
     border-radius: 1rem;
-    margin-bottom: 3rem;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+    border: 1px solid #343944;
+    background: #20232b;
     padding: 1.5rem;
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
     transition:
         border-color 0.3s ease,
         box-shadow 0.3s ease,
@@ -91,8 +89,18 @@ body {
 }
 
 .experience-item:hover .experience-card {
-    border-color: rgba(243, 244, 246, 0.35);
-    box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.08);
+    border-color: #64748b;
+    box-shadow: none;
+}
+
+.experience-sidebar, .experience-filters, .experience-panel {
+    background: #191b21;
+    border-color: #343944;
+}
+
+.experience-active {
+    color: #eaf0fa;
+    background: #26354f;
 }
 
 .experience-header {
@@ -108,10 +116,25 @@ body {
     gap: 0.5rem;
 }
 
+.project-list {
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.project-icon {
+    display: flex;
+    flex: 0 0 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #334155;
+    border-radius: 0.75rem;
+    background: #152b53;
+    color: #c8dbff;
+}
+
 @media (min-width: 768px) {
     .experience-timeline {
-        min-height: calc(100vh - 240px);
-        max-height: calc(100vh - 240px);
         padding-left: 2rem;
     }
 
@@ -123,5 +146,13 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .experience-timeline, .project-list {
+        flex: 1;
+        min-height: 0;
+        max-height: none;
     }
 }

@@ -1,96 +1,61 @@
-<body
-    class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
-    <main class="max-w-6xl mx-auto px-6 pt-8">        
+﻿<body class="contact-page min-h-screen font-sans">
+    <main class="max-w-6xl mx-auto px-4 sm:px-8 pt-8">
         <app-navbar></app-navbar>
-        <div
-            class="bg-white/5 rounded-3xl p-8 md:p-12 shadow-2xl dark:shadow-[0_0_50px_rgba(0,0,0,0.3)] border border-slate-200 dark:border-white/5 flex flex-col lg:flex-row gap-16 relative overflow-hidden">
+        <div class="contact-layout rounded-2xl border flex flex-col lg:flex-row gap-10 lg:gap-16 p-6 sm:p-8 md:p-12">
             <div class="flex-1 flex flex-col justify-center">
-                <h1 class="text-5xl text-start md:text-6xl font-bold mb-16 tracking-tight"> Contact me!</h1>
-                <h2 class="text-2xl font-semibold mb-10 text-slate-800 dark:text-slate-200">You can also...</h2>
-                <div class="space-y-10">
-                    <div class="group flex items-center gap-6">
-                        <div
-                            class="h-16 w-16 min-h-16 min-w-16 shrink-0 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10 group-hover:border-primary/50 transition-colors">
-                            <span class="material-symbols-outlined text-3xl">mail</span>
-                        </div>
-                        <div>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Email me directly at</p>
-                            <a class="text-lg font-medium hover:text-primary transition-colors"
-                                href="mailto:pspanchig@outlook.com">pspanchig@outlook.com</a>
+                <p class="contact-eyebrow">Get in touch</p>
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-5">Contact me</h1>
+                <p class="contact-intro mb-10">Let's connect. You can reach me directly using any of the options below.</p>
+                <div class="space-y-6">
+                    <div class="contact-method">
+                        <div class="contact-icon"><span aria-hidden="true" class="material-symbols-outlined">mail</span></div>
+                        <div class="min-w-0">
+                            <p class="contact-label">Email me directly at</p>
+                            <a class="contact-link" href="mailto:pspanchig@outlook.com">pspanchig&#64;outlook.com</a>
                         </div>
                     </div>
-                    <div class="group flex items-center gap-6">
-                        <div
-                            class="h-16 w-16 min-h-16 min-w-16 shrink-0 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10 group-hover:border-primary/50 transition-colors">
-                            <span class="material-symbols-outlined text-3xl">call</span>
-                        </div>
-                        <div>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Call me directly at</p>
-                            <p class="text-lg font-medium">(+593) 0998587329</p>
+                    <div class="contact-method">
+                        <div class="contact-icon"><span aria-hidden="true" class="material-symbols-outlined">call</span></div>
+                        <div class="min-w-0">
+                            <p class="contact-label">Call me directly at</p>
+                            <p class="contact-value">(+593) 0998587329</p>
                         </div>
                     </div>
-                    <div class="group flex items-center gap-6">
-                        <div
-                            class="h-16 w-16 min-h-16 min-w-16 shrink-0 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10 group-hover:border-primary/50 transition-colors">
-                            <span class="material-symbols-outlined text-3xl">chat</span>
-                        </div>
-                        <div>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Text me directly at</p>
-                            <a class="text-lg font-medium text-blue-500 hover:text-blue-400 transition-colors"
-                                href="https://wa.me/5930998587329">(+593) 0998587329</a>
+                    <div class="contact-method">
+                        <div class="contact-icon"><span aria-hidden="true" class="material-symbols-outlined">chat</span></div>
+                        <div class="min-w-0">
+                            <p class="contact-label">Text me directly at</p>
+                            <a class="contact-link" href="https://wa.me/5930998587329">(+593) 0998587329</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex-1 text-slate-950">
-                <div
-                    class="bg-red-700 dark:bg-black/20 rounded-2xl p-8 border border-slate-200 dark:border-white/5 relative">
-                    <div
-                        class="absolute inset-x-0 top-0 mx-auto w-fit max-w-[85%] text-center bg-primary text-black px-5 py-2 rounded-full font-bold text-xs tracking-[0.2em] uppercase shadow-lg shadow-primary/30 sm:max-w-1/2 sm:px-8 sm:text-sm sm:tracking-wider">
-                        Email me!
+            <div class="contact-form-panel flex-1 rounded-xl p-6 sm:p-8">
+                <h2 class="text-xl font-semibold text-white">Email me</h2>
+                <p class="contact-label mt-2">Share a few details about your message.</p>
+                <form class="mt-6 space-y-5">
+                    <div>
+                        <label for="contact-email">Your email</label>
+                        <input id="contact-email" autocomplete="email" placeholder="Type your email here..." type="email" />
                     </div>
-                    <form class="mt-8 space-y-6">
-                        <div>
-                            <label
-                                class="block text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2 ml-1">Your
-                                Email</label>
-                            <input
-                                class="text-slate-950 w-full px-5 py-4 rounded-xl bg-white dark:glass-input border-slate-300 dark:border-white/10  dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:ring-2 focus:ring-primary/50 transition-all"
-                                placeholder="Type your email here..." type="email" />
-                        </div>
-                        <div>
-                            <label
-                                class="block text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2 ml-1">Your
-                                Name</label>
-                            <input
-                                class="w-full px-5 py-4 rounded-xl bg-white dark:glass-input border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:ring-2 focus:ring-primary/50 transition-all"
-                                placeholder="Type your name here..." type="text" />
-                        </div>
-                        <div>
-                            <label
-                                class="block text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2 ml-1">Subject</label>
-                            <input
-                                class="w-full px-5 py-4 rounded-xl bg-white dark:glass-input border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:ring-2 focus:ring-primary/50 transition-all"
-                                placeholder="Type your subject here..." type="text" />
-                        </div>
-                        <div>
-                            <label
-                                class="block text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2 ml-1">Message</label>
-                            <textarea
-                                class="w-full px-5 py-4 rounded-xl bg-white dark:glass-input border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:ring-2 focus:ring-primary/50 transition-all resize-none"
-                                placeholder="Type your message here..." rows="4"></textarea>
-                        </div>
-                        <button
-                            class="w-full bg-amber-400 hover:bg-primary/90 text-black font-bold py-4 rounded-xl glow-button transition-all duration-300 uppercase tracking-widest mt-4"
-                            type="submit">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                    <div>
+                        <label for="contact-name">Your name</label>
+                        <input id="contact-name" autocomplete="name" placeholder="Type your name here..." type="text" />
+                    </div>
+                    <div>
+                        <label for="contact-subject">Subject</label>
+                        <input id="contact-subject" placeholder="Type your subject here..." type="text" />
+                    </div>
+                    <div>
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" placeholder="Type your message here..." rows="4"></textarea>
+                    </div>
+                    <button class="contact-submit" type="submit">Send message</button>
+                </form>
             </div>
         </div>
-    <div class="mt-12 flex items-center justify-center pb-8 text-xs text-gray-600 font-mono tracking-wide opacity-60">
-        © 2026 PABLO S. PANCHIG. ALL RIGHTS RESERVED.
-    </div>
+        <div class="mt-12 flex items-center justify-center pb-8 text-xs text-gray-500 font-mono tracking-wide">
+            © 2026 PABLO S. PANCHIG. ALL RIGHTS RESERVED.
+        </div>
     </main>
 </body>

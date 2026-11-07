@@ -13,3 +13,5 @@ export const routes: Routes = [
     { path: 'school/:name', component: InstitucionInfo },
     { path: '**', redirectTo: '' }
 ];
+
+

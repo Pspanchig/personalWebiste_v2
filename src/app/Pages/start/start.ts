@@ -4,6 +4,7 @@ import { EduactionApisService, EducationAPI } from '../../service/eduaction-apis
 import { CertAPI, CertsApisService } from '../../service/certs-apis.service';
 import { SkillAPI, SkillsApisService } from '../../service/skills-apis.service';
 import { RouterLink } from '@angular/router';
+import { PROJECTS } from '../../data/projects';
 
 @Component({
   selector: 'app-start',
@@ -12,6 +13,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './start.css',
 })
 export class Start {
+  readonly projects = PROJECTS;
   
   // Education variables
   public loadingEducation = signal<boolean>(true);

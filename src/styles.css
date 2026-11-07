@@ -1,4 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
-/* @config "../tailwind.config.js"; */
 @config "../tailwind.config.js";
 @import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --ui-background: #0f1014;
+  --ui-surface: #191b21;
+  --ui-surface-raised: #20232b;
+  --ui-border: #343944;
+  --ui-text: #eaf0fa;
+  --ui-text-secondary: #b9c5d8;
+  --ui-accent: #79a8ff;
+}
+
+html { background: var(--ui-background); }
+body { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+button, input, textarea { font: inherit; }
+button:not(:disabled), a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid #a7c4ff; outline-offset: 3px; }
+::selection { background: #152b53; color: #eaf0fa; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,6 +1,9 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { Navbar } from '../../assets/shared/navbar/navbar';
 import { JobExperience, JobsExpService } from '../../service/jobs-exp.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { PROJECTS } from '../../data/projects';
 
 @Component({
   selector: 'app-experience',
@@ -10,16 +13,30 @@ import { JobExperience, JobsExpService } from '../../service/jobs-exp.service';
 })
 export class Experience {
   private jobsExpAPI = inject(JobsExpService);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
   private readonly collapsedResponsibilities = 2;
 
+  activeTab = signal<'projects' | 'experience'>('experience');
   jobExperiences = signal<JobExperience[]>([]);
   selectedTechnologies = signal<string[]>([]);
   searchQuery = signal('');
   expandedJobIds = signal<number[]>([]);
 
   availableTechnologies = computed(() =>
-    [...new Set(this.jobExperiences().flatMap((job) => job.technologies))].sort(),
+    [...new Set(this.activeTab() === 'projects'
+      ? PROJECTS.flatMap((project) => project.technologies)
+      : this.jobExperiences().flatMap((job) => job.technologies))].sort(),
   );
+
+  filteredProjects = computed(() => {
+    const selected = this.selectedTechnologies();
+    const query = this.searchQuery().trim().toLowerCase();
+    return PROJECTS.filter((project) =>
+      selected.every((technology) => project.technologies.includes(technology)) &&
+      [project.name, project.description, ...project.technologies].join(' ').toLowerCase().includes(query),
+    );
+  });
 
   filteredJobs = computed(() => {
     const selected = this.selectedTechnologies();
@@ -38,12 +55,27 @@ export class Experience {
   });
 
   constructor() {
+    this.route.queryParamMap.pipe(takeUntilDestroyed()).subscribe((params) => {
+      const tab = params.get('tab') === 'projects' ? 'projects' : 'experience';
+      if (tab !== this.activeTab()) {
+        this.activeTab.set(tab);
+        this.selectedTechnologies.set([]);
+        this.searchQuery.set('');
+      }
+    });
     this.jobsExpAPI.list().subscribe({
       next: (jobs) => {
         this.jobExperiences.set(jobs);
-        this.selectedTechnologies.set([]);
       },
       error: (err) => console.error('Error fetching job experience:', err),
+    });
+  }
+
+  selectTab(tab: 'projects' | 'experience') {
+    void this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { tab: tab === 'projects' ? 'projects' : null },
+      queryParamsHandling: 'merge',
     });
   }
 
