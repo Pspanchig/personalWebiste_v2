@@ -22,5 +22,6 @@ export const PROJECTS: readonly Project[] = [
     description: 'Machine learning-based anomaly detection for cloud infrastructure.',
     technologies: ['Machine Learning', 'Cloud'],
     icon: 'cloud',
+    link: 'http://141.148.70.195:8501/',
   },
 ];
